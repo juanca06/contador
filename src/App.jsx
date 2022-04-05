@@ -15,13 +15,16 @@ function App() {
       setCuenta(cuenta-paso);
   }
     const handleResetClic = () => {
-      setCuenta (0);
-      setPaso (1);
+      setCuenta (cuenta-cuenta);
+      setPaso(1);
   };
 
 const handleInputChange = (e) => {
-  setPaso (Number(e.target.value))
-}
+  if (isNaN(e.target.value)){
+    return;
+  }
+  setPaso(Number(e.target.value))
+};
 
   return (
     <div className="App" >
